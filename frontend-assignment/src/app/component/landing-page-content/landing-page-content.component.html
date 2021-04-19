@@ -1,0 +1,50 @@
+<div class="container-fluid main-content">
+    <div class="row main-role">
+        <div class="left-content col-sm-6">
+            <h3>We make it Super<br>Simple</h3>
+            <img class="border-image" src="../../../assets/icons/line.svg" />
+            <img src="../../../assets/icons/collect_img-video.png" class="header-image"/>
+        </div>
+        <div class="middle-content col-sm-4">
+            <form [formGroup]="calcLoanForm" class="calc">
+                <p class="text-center">Eligibility Calculator</p>
+                <div class="slidecontainer">
+                    <label for="customRange">Monthly Income:</label><br>
+                    <p>₹{{ this.monthlyIncomeVal }}</p>
+                    <input formControlName="monthlyIncome" type="range" min="0" max="100000" class="slider" id="customRange">
+                  </div>
+                <div class="eligibility">
+                    <label for="expenses">Monthly Expenses:</label><br>
+                    <p>₹{{ this.monthlyExpenseVal }}</p>
+                    <input type="range" formControlName="monthlyExpense" class="slider" id="expenses" min="0" max="100000">
+                </div>
+                <div class="eligibility">
+                    <label for="customRange">Repayment Tenure:</label><br>
+                    <select formControlName="tenure" class="custom-select" id="">
+                        <option value="1">6 months</option>
+                        <option value="2">1 year</option>
+                        <option value="3">2 years</option>
+                    </select>
+                </div>
+                <div class="eligibility">
+                    <span id="result">Do you have any existing loans</span>
+                    <label class="switch">
+                        <input formControlName="existingLoan" type="checkbox">
+                        <span class="toggle round"></span>
+                    </label>
+                </div>
+                <div class="eligibility">
+                    <label for="">EMI of existing loan (optional)</label><br>
+                    <input type="text" formControlName="emiOption" class="input-field" id="emi" name="emi" placeholder="₹150000">
+                </div>
+            </form>
+        </div>
+        <div class="right-content col-sm-2">
+            <div class="loanAmount">
+                <p>Loan Amount <br><b>₹1000000</b></p>
+                <p>Your EMI will be <br><b>₹150000</b></p>
+                <button class="get-money-button" type="submit">Get Money</button>
+            </div>
+        </div>
+    </div>
+</div>
