@@ -1,0 +1,41 @@
+.content-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-bg {
+	background-image:url(../../../assets/icons/footer_bg.svg);
+	background-repeat:no-repeat;
+	padding-top: 8rem;
+}
+
+.boxes {
+    background: #ffffff;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 30px #2321321F;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    &:hover{
+        background-color:#921992;
+        color:#ffffff;
+    }
+}
+
+.boost_business {
+    margin: 3rem;
+    button {
+        box-shadow: 0px 0px 20px #00000033;
+        border: 2px solid #663399;
+        border-radius: 24px;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #663399;
+
+        &:hover{
+            background-color:#663399;
+            color:#ffffff;
+        }
+    }
+}
